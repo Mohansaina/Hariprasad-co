@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Hariprasad & Co</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .page-header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .page-container {
+            padding: 0 20px 30px;
+        }
+        
+        .team-section {
+            margin: 30px 0;
+        }
+        
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f0f4f8, #ffffff);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: #003366;
+            border: 3px solid #00a86b;
+        }
+        
+        .team-member h3 {
+            color: #003366;
+            margin: 10px 0 5px;
+        }
+        
+        .team-member p.position {
+            color: #00a86b;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .certifications {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .certifications h3 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+        }
+        
+        .cert-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .cert-item i {
+            font-size: 2rem;
+            color: #00a86b;
+            margin-bottom: 8px;
+        }
+        
+        .values-section {
+            margin: 30px 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            border-top: 4px solid #00a86b;
+        }
+        
+        .value-card i {
+            font-size: 2.5rem;
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        
+        .value-card h3 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body data-layout="desktop">
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">Hariprasad & Co</a>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1>About Hariprasad & Co</h1>
+        </div>
+        
+        <div class="page-container">
+            <section class="about-content">
+                <h2>Our Story</h2>
+                <p>Founded in 2005, Hariprasad & Co has grown to become one of the most trusted chartered accountancy firms in Shamshabad, Hyderabad. Our journey began with a vision to provide reliable, ethical, and professional financial services to individuals and businesses.</p>
+                
+                <p>Over the years, we have built a reputation for excellence, integrity, and personalized service. Our team of certified professionals stays abreast of changing regulations and industry best practices to ensure our clients receive the highest quality advice and service.</p>
+            </section>
+            
+            <section class="values-section">
+                <h2>Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Integrity</h3>
+                        <p>We conduct our business with honesty, transparency, and the highest ethical standards.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Client Focus</h3>
+                        <p>We prioritize our clients' needs and work tirelessly to achieve their financial goals.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Excellence</h3>
+                        <p>We are committed to delivering superior service and maintaining the highest professional standards.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="team-section">
+                <h2>Meet Our Team</h2>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Hariprasad Reddy</h3>
+                    <p class="position">Founder & Senior Partner</p>
+                    <p>CA with 20+ years of experience in taxation, audit, and financial consulting.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Swathi Reddy</h3>
+                    <p class="position">Tax Consultant</p>
+                    <p>Specializes in GST, Income Tax, and corporate compliance with 12+ years of experience.</p>
+                </div>
+            </section>
+            
+            <section class="certifications">
+                <h3>Certifications & Memberships</h3>
+                <div class="cert-list">
+                    <div class="cert-item">
+                        <i class="fas fa-file-contract"></i>
+                        <div>ICAI</div>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-globe"></i>
+                        <div>IGST Council</div>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-building"></i>
+                        <div>ICAAP</div>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>Tax Practitioner</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- WhatsApp Button Fixed at Bottom -->
+        <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+            <a href="https://wa.me/919999999999" class="whatsapp-button" style="margin: 0; padding: 15px 20px;">
+                <i class="fab fa-whatsapp"></i>
+                Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+    
+    <script src="assets/images/placeholder.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

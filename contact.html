@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hariprasad & Co</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .page-header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .page-container {
+            padding: 0 20px 30px;
+        }
+        
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .contact-info-section {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        }
+        
+        .contact-info-section h2 {
+            color: #003366;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-item-large {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .contact-item-large i {
+            color: #003366;
+            font-size: 1.5rem;
+            min-width: 30px;
+            margin-top: 5px;
+        }
+        
+        .contact-item-large div h3 {
+            color: #003366;
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item-large div p {
+            margin: 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .map-section {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        }
+        
+        .map-section h2 {
+            color: #003366;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .map-placeholder {
+            background: linear-gradient(135deg, #e6f0ff, #f0f7ff);
+            border-radius: 12px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #003366;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-align: center;
+            border: 2px dashed #00a86b;
+        }
+        
+        .form-section {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            grid-column: 1 / -1;
+        }
+        
+        .form-section h2 {
+            color: #003366;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #003366;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #00a86b;
+            box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+            color: white;
+            border: none;
+            padding: 16px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 51, 102, 0.3);
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #004d99 0%, #003366 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 51, 102, 0.4);
+        }
+        
+        .hours-section {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            grid-column: 1 / -1;
+        }
+        
+        .hours-section h2 {
+            color: #003366;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        
+        .hour-item strong {
+            color: #003366;
+        }
+    </style>
+</head>
+<body data-layout="desktop">
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">Hariprasad & Co</a>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1>Contact Us</h1>
+        </div>
+        
+        <div class="page-container">
+            <div class="contact-wrapper">
+                <div class="contact-info-section">
+                    <h2>Get In Touch</h2>
+                    <div class="contact-details">
+                        <div class="contact-item-large">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Our Location</h3>
+                                <p>Plot No. 12, Survey No. 56,<br>
+                                Opposite RTC Bus Stop,<br>
+                                Shamshabad, Hyderabad - 500078</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item-large">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone Number</h3>
+                                <p>+91 40 1234 5678<br>
+                                +91 98765 43210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item-large">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email Address</h3>
+                                <p>info@hariprasadco.com<br>
+                                support@hariprasadco.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item-large">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h3>Working Hours</h3>
+                                <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>
+                                Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-section">
+                    <h2>Find Us</h2>
+                    <div class="map-placeholder">
+                        <div>
+                            <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                            <p>Google Map Integration<br>
+                            <small>Location: Plot No. 12, RTC Bus Stop, Shamshabad, Hyderabad</small></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hours-section">
+                    <h2>Working Hours</h2>
+                    <div class="hours-grid">
+                        <div class="hour-item">
+                            <span><strong>Monday - Friday</strong></span>
+                            <span>9:00 AM - 7:00 PM</span>
+                        </div>
+                        <div class="hour-item">
+                            <span><strong>Saturday</strong></span>
+                            <span>9:00 AM - 7:00 PM</span>
+                        </div>
+                        <div class="hour-item">
+                            <span><strong>Sunday</strong></span>
+                            <span>Closed</span>
+                        </div>
+                        <div class="hour-item">
+                            <span><strong>Holidays</strong></span>
+                            <span>By Appointment</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service" class="form-control" required>
+                                <option value="">Select a Service</option>
+                                <option value="itr">ITR Filing</option>
+                                <option value="gst">GST Registration & Compliance</option>
+                                <option value="financial-planning">Financial Planning</option>
+                                <option value="accounting">Accounting & Bookkeeping</option>
+                                <option value="audit">Audit Services</option>
+                                <option value="business-formation">Business Formation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- WhatsApp Button Fixed at Bottom -->
+        <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+            <a href="https://wa.me/919999999999" class="whatsapp-button" style="margin: 0; padding: 15px 20px;">
+                <i class="fab fa-whatsapp"></i>
+                Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+    
+    <script src="assets/images/placeholder.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Validate form
+            if(validateContactForm(data).length === 0) {
+                // Show success notification
+                showNotification('Thank you for your message! We will contact you soon.', 'success');
+                
+                // Reset form
+                this.reset();
+            } else {
+                // Show error notification
+                showNotification('Please fill in all required fields correctly.', 'error');
+            }
+        });
+        
+        // Add input validation feedback
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('blur', function() {
+                if(this.value.trim() === '') {
+                    this.style.borderColor = '#ff6b6b';
+                } else {
+                    this.style.borderColor = '#ddd';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

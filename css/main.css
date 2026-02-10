@@ -1,0 +1,540 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    color: #333;
+    line-height: 1.6;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eaeaea;
+    position: relative;
+    overflow: hidden;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #003366;
+    box-shadow: 0 8px 30px rgba(0, 51, 102, 0.25), inset 0 0 15px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(145deg, #f0f4f8, #ffffff);
+    position: relative;
+    /* Create a subtle shine effect */
+    background-image: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), transparent 50%),
+                      linear-gradient(145deg, #f0f4f8, #ffffff);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.verified-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #00a86b;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.headline {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #003366;
+    text-align: center;
+    margin: 10px 0 15px;
+    line-height: 1.4;
+    max-width: 90%;
+    background: linear-gradient(to right, #003366, #004d99);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.headline::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #00a86b, transparent);
+    margin: 8px auto;
+    border-radius: 2px;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #25D366, #1da851);
+    color: white;
+    padding: 16px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4),
+                inset 0 2px 2px rgba(255, 255, 255, 0.3),
+                0 0 0 3px rgba(37, 211, 102, 0.2);
+    transition: all 0.3s ease;
+    margin: 15px 0;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+.whatsapp-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+}
+
+.whatsapp-button:hover::before {
+    left: 100%;
+}
+
+.whatsapp-button:hover {
+    background: linear-gradient(135deg, #1da851, #25D366);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5),
+                inset 0 2px 2px rgba(255, 255, 255, 0.3),
+                0 0 0 3px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4),
+                inset 0 2px 2px rgba(255, 255, 255, 0.3);
+}
+
+.whatsapp-button i {
+    font-size: 1.2rem;
+}
+
+/* Rating Section */
+.rating-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+.stars i {
+    color: #ffc107;
+    font-size: 1.3rem;
+    text-shadow: 0 2px 4px rgba(255, 193, 7, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.stars i:hover {
+    transform: scale(1.2);
+}
+
+.rating-text {
+    font-weight: 500;
+    color: #003366;
+    font-size: 0.95rem;
+}
+
+/* Services Section */
+.services-section {
+    padding: 30px 20px;
+    background-color: #ffffff;
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 25px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #003366, #00a86b);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 51, 102, 0.15);
+    border-color: #00a86b;
+    background: linear-gradient(145deg, #ffffff, #f0f7ff);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.service-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* About Section */
+.about-section {
+    padding: 30px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.7;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 30px 20px;
+    background-color: #f8fafc;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.contact-item i {
+    color: #003366;
+    font-size: 1.2rem;
+    min-width: 24px;
+    margin-top: 4px;
+}
+
+.contact-item p {
+    color: #555;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px 20px;
+    background: linear-gradient(135deg, #003366, #002244);
+    color: #ffffff;
+    font-size: 0.9rem;
+    box-shadow: 0 -5px 15px rgba(0, 51, 102, 0.1);
+}
+
+.footer p {
+    color: #e0e7ff;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+    .headline {
+        font-size: 1.25rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .profile-image-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .whatsapp-button {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Tablet responsiveness */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .headline {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .profile-image-container {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* Desktop responsiveness */
+@media (min-width: 769px) {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+    }
+    
+    .header {
+        padding: 35px 30px;
+    }
+    
+    .headline {
+        font-size: 1.8rem;
+        max-width: 100%;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        max-width: 700px;
+    }
+    
+    .profile-image-container {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .whatsapp-button {
+        padding: 16px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .service-card {
+        padding: 25px 20px;
+    }
+    
+    .contact-info {
+        max-width: 600px;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .contact-item {
+        padding: 0;
+    }
+}
+
+/* Beautiful entrance animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Apply animations */
+.profile-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.services-section {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.about-section {
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.contact-section {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Floating animation for profile image */
+.profile-image-container {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Additional visual enhancements */
+.service-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Device-specific enhancements */
+body.desktop .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 51, 102, 0.15);
+}
+
+body.desktop .whatsapp-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* Subtle background enhancement for larger screens */
+@media (min-width: 769px) {
+    body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        padding: 40px 20px;
+        min-height: 100vh;
+    }
+    
+    .container {
+        min-height: calc(100vh - 80px);
+    }
+}

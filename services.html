@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Hariprasad & Co</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .page-header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .page-container {
+            padding: 0 20px 30px;
+        }
+        
+        .services-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .service-card-full {
+            background: white;
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #eaeaea;
+        }
+        
+        .service-card-full:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 51, 102, 0.15);
+            border-color: #00a86b;
+        }
+        
+        .service-card-full::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #003366, #00a86b);
+        }
+        
+        .service-icon-full {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .service-card-full h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        
+        .service-card-full p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .pricing {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #003366;
+        }
+        
+        .process-section {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #00a86b;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+        
+        .faq-section {
+            margin: 30px 0;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: #f8fafc;
+            font-weight: 600;
+            color: #003366;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body data-layout="desktop">
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">Hariprasad & Co</a>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1>Our Services</h1>
+        </div>
+        
+        <div class="page-container">
+            <section class="intro">
+                <h2 style="text-align: center; color: #003366; margin-bottom: 20px;">Comprehensive Financial Solutions</h2>
+                <p style="text-align: center; color: #666; max-width: 600px; margin: 0 auto 30px; line-height: 1.7;">
+                    At Hariprasad & Co, we offer a wide range of professional accounting, taxation, and financial advisory services tailored to meet the unique needs of individuals and businesses.
+                </p>
+            </section>
+            
+            <section class="services-grid-full">
+                <div class="service-card-full">
+                    <div class="service-icon-full">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>ITR Filing</h3>
+                    <p>Expert income tax return filing services for individuals, HUFs, and businesses. We ensure timely and accurate filing with maximum benefits and deductions.</p>
+                    <div class="pricing">Starting from ₹299</div>
+                </div>
+                
+                <div class="service-card-full">
+                    <div class="service-icon-full">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>GST Registration & Compliance</h3>
+                    <p>Complete GST registration, return filing, and compliance services. Stay compliant with changing GST regulations with our expert guidance.</p>
+                    <div class="pricing">Starting from ₹999</div>
+                </div>
+                
+                <div class="service-card-full">
+                    <div class="service-icon-full">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Financial Planning</h3>
+                    <p>Comprehensive financial planning and investment advisory services to help you achieve your financial goals and secure your future.</p>
+                    <div class="pricing">Custom Pricing</div>
+                </div>
+                
+                <div class="service-card-full">
+                    <div class="service-icon-full">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Accounting & Bookkeeping</h3>
+                    <p>Professional bookkeeping, account maintenance, and financial reporting services for businesses of all sizes.</p>
+                    <div class="pricing">Starting from ₹1,999/month</div>
+                </div>
+                
+                <div class="service-card-full">
+                    <div class="service-icon-full">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Audit Services</h3>
+                    <p>Statutory audits, internal audits, and tax audits conducted by our team of experienced chartered accountants.</p>
+                    <div class="pricing">Custom Pricing</div>
+                </div>
+                
+                <div class="service-card-full">
+                    <div class="service-icon-full">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Business Formation</h3>
+                    <p>Assistance with company incorporation, partnership formation, and other business registration services.</p>
+                    <div class="pricing">Starting from ₹4,999</div>
+                </div>
+            </section>
+            
+            <section class="process-section">
+                <h2 style="text-align: center; color: #003366; margin-bottom: 20px;">Our Process</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Consultation</h3>
+                        <p>Free initial consultation to understand your needs</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Documentation</h3>
+                        <p>Collect required documents and information</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Processing</h3>
+                        <p>Expert processing of your requirements</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Delivery</h3>
+                        <p>Timely delivery of completed services</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="faq-section">
+                <h2 style="text-align: center; color: #003366; margin-bottom: 20px;">Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What documents are needed for ITR filing?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For ITR filing, you'll typically need Form 16, bank statements, investment proofs, PAN card, Aadhaar card, and any other income certificates.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does GST registration take?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Under normal circumstances, GST registration takes 3-7 working days. However, it may vary depending on the completeness of documents and government processing time.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you offer ongoing compliance services?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer comprehensive ongoing compliance packages for businesses including monthly accounting, quarterly GST filing, TDS filing, and annual ROC compliance.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- WhatsApp Button Fixed at Bottom -->
+        <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+            <a href="https://wa.me/919999999999" class="whatsapp-button" style="margin: 0; padding: 15px 20px;">
+                <i class="fab fa-whatsapp"></i>
+                Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+    
+    <script src="assets/images/placeholder.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+                
+                const icon = question.querySelector('i');
+                if (faqItem.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
